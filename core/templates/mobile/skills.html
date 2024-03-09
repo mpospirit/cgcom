@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- 
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (mobile) {
+                alert("This website is designed to be experienced on a desktop. Please visit on a desktop device. -Çağrı");
+            } else {
+
+            }
+        }
+    </script> -->
+
+    <title>Çağrı Gökpunar - Skills</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+
+</head>
+
+<body class="mobile">
+    <div>
+        <h1>Skills</h1>
+        <b>Machine Learning</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">scikit-learn, TensorFlow, Keras</p>
+
+        <b>Data Manipulation and Analysis</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">numpy, pandas, polars, matplotlib, seaborn, plotly, cufflinks,
+            Alteryx
+        </p>
+
+        <b>Database Management</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">BigQuery, MySQL, PostgreSQL, MSSQL, MongoDB, DynamoDB</p>
+
+        <b>Data Visualization</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">PowerBI, Tableau, QuickSight, Looker</p>
+
+        <b>Operations Research</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">Pyomo, Ortools, PuLP, SCIP</p>
+
+        <b>DevOps</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">AWS (Batch, Lambda, S3, EC2, Elastic Beanstalk, etc.)</p>
+
+        <b>Backend Development</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">Django, Streamlit, Firebase</p>
+
+        <b>Mobile Development</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">Flutter, Kivy</p>
+
+        <h1>Activities</h1>
+        <b>Competitions</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">I like to learn new things from Kaggle. <br><a
+                href="https://www.kaggle.com/mpospirit" target="_blank"
+                style="text-decoration: none; color: #701414;"><b>My profile link</b></a></p>
+        <b>Achievements</b>
+        <p style="margin-top: 0;">Google Foobar Challange</p>
+        <p style="margin-top: 0;">Project Euler (Currently solved: 22)</p>
+
+        <h1>Softwares</h1>
+        <b>Graphics</b>
+        <p style="margin-bottom: 10px; margin-top: 0; text-align: left;">Adobe Photoshop, Illustrator, Affinity
+            Designer, Procreate</p>
+        <b>Motion Graphics</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">Adobe After Effects, Premiere Pro</p>
+        <b>3D Modelling</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">Blender, SOLIDWORKS</p>
+        <b>UI/UX Design</b>
+        <p style="margin-bottom: 10px; margin-top: 0;">Adobe XD, Figma</p>
+        <b>Music & Sound</b>
+        <p style="margin-bottom: 40px; margin-top: 0;">Logic Pro, FL Studio</p>
+
+        <a href="{% url 'core:index' %}"
+            style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+                class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the home page</a>
+    </div>
+</body>
+
+</html>

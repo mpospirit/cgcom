@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- code highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+  <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script>
+
+  <title>Blog Post Template For Mobile - Çağrı Gökpunar</title>
+  <meta name="description" content="Çağrı Gökpunar's personal website.">
+  <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+  <meta name="author" content="Çağrı Gökpunar">
+</head>
+
+<body class="blog_mobile">
+  <div>
+    <!-- h1 is aligned to the left in mobile view -->
+    <h1 style="text-align: left;">Lorem Ipsum Dolor Sit Amet</h1>
+    <p style="margin-bottom: 20px;">Çağrı Gökpunar - Dec 2023</p>
+    <a class="twitter-share-button" target="_blank"
+      href="https://twitter.com/intent/tweet?text=Lorem%20Ipsum%20Dolor%20Sit%20Amet%20&url=https%3A%2F%2Fcagrigokpunar.com%2Fblog%2Fexample%2F"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-brands fa-x-twitter" style="color: #ffffff;"></i> Share</a> <a
+      href="https://www.buymeacoffee.com/mpospirit" target="_blank"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-solid fa-mug-hot" style="color: #ffffff;"></i> Buy me a coffee</a>
+    <p style="margin-bottom: 30px; margin-top: 20px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem explicabo, ad
+      earum quasi consectetur sapiente, facilis beatae tempora aspernatur expedita molestiae ipsum officia autem
+      obcaecati vero harum, fuga odio. Et.</p>
+
+    <a href="{% url 'core:blog' %}"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the blogs</a>
+
+    <hr style="margin-top: 30px;">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, et expedita. Minima
+      cumque libero quia similique vitae in tempore quo, illo nostrum dolorem, quis natus quisquam fugit molestias
+      tempora maxime?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus exercitationem soluta error. Nulla corporis
+      incidunt ex vel? Porro numquam alias saepe! Placeat ipsam doloremque libero aliquid magnam sequi dolorem dicta?
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas eveniet itaque expedita veritatis blanditiis
+      possimus enim deleniti, quia fugit odit sunt minus, libero, quae quod fuga vel maiores quam eum.</p>
+    <!-- image -->
+    <img src="{% static 'img/thesis/brain.jpg' %}" alt="Blog Example"
+      style="width: 100%; margin-top: 40px; margin-bottom: 30px; display: block; margin-left: auto; margin-right: auto;">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, id? Id accusamus voluptate voluptatem facere non
+      illo fuga, veniam, iure assumenda reprehenderit nulla sunt velit similique in libero minima alias?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse repellat quasi adipisci quo laborum accusamus quam
+      perspiciatis excepturi deserunt aperiam corrupti, laudantium accusantium eaque nisi possimus praesentium non
+      distinctio! Harum?</p>
+    <ul>
+      <li>Lorem</li>
+      <li>Ipsum</li>
+      <li>Dolor</li>
+      <li>Sit</li>
+      <li>Amet</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, modi sed consequatur omnis eveniet nihil fuga
+      perspiciatis iure, perferendis saepe nemo ea mollitia! Inventore tempore corporis, omnis a reiciendis officiis.
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto iusto officia quae tenetur sunt neque
+      repellendus aspernatur ex. Nisi temporibus soluta dolor accusamus deserunt, sapiente molestias eaque voluptates
+      odio ducimus.</p>
+
+    <hr style="margin-bottom: 30px;">
+    <a href="{% url 'core:blog' %}"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the blogs</a>
+  </div>
+</body>

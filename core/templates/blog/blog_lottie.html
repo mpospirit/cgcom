@@ -1,0 +1,188 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- code highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+  <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script>
+
+  <title>Creating Lottie Animations for the Web Using After Effects - Çağrı Gökpunar</title>
+  <meta name="description" content="Creating Lottie Animations for the Web Using After Effects">
+  <meta name="keywords"
+    content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar, lottie, json, after, effects, animation">
+  <meta name="author" content="Çağrı Gökpunar">
+</head>
+
+<body class="blog">
+  <div>
+    <h1>Creating Lottie Animations for the Web Using After Effects</h1>
+    <p style="margin-bottom: 20px;">Çağrı Gökpunar - Jan 2024</p>
+    <a class="twitter-share-button" target="_blank"
+      href="https://twitter.com/intent/tweet?text=Check%20out%20Creating%20Lottie%20Animations%20for%20the%20Web%20Using%20After%20Effects%20by%20Çağrı%20Gökpunar&url=https%3A%2F%2Fcagrigokpunar.com%2Fblog%2Fcreating-lottie-animations-for-the-web-using-after-effects%2F"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-brands fa-x-twitter" style="color: #ffffff;"></i> Share</a> <a
+      href="https://www.buymeacoffee.com/mpospirit" target="_blank"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-solid fa-mug-hot" style="color: #ffffff;"></i> Buy me a coffee</a>
+    <p style="margin-bottom: 30px; margin-top: 20px;">
+      Since I plan to use some cool animations on my website, I decided to write a blog post about how to create them
+      while I was learning. I will be using After Effects for the animations and the Lottie plugin for exporting them to
+      JSON format. Then I will display the animations on my website with a few lines of JavaScript code.
+    </p>
+
+    <a href="{% url 'core:blog' %}"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the blogs</a>
+
+    <hr style="margin-top: 30px;">
+    <h2>The First Animation</h2>
+    <p>
+      The first thing I did was download the <a href="https://lottiefiles.com/plugins/after-effects"
+        target="_blank">LottieFiles plugin for After Effects</a>. I downloaded the plugin via
+      Adobe Exchange
+      since it felt easier. After installing the plugin, I opened After Effects and created a new composition.
+    </p>
+
+    <p>
+      Nothing fancy here; I just created an 800x400 composition with 60 fps. Then I created a circle with the Ellipse
+      Tool. The animation is quite simple; the circle just moves from left to right and then from right to left. For
+      smoothness, I set the keyframe velocity to 75%. I used the <i>loopOut()</i> expression to make the animation loop
+      with
+      the parameter <i>"pingpong"</i>.
+    </p>
+
+    <img src="{% static 'img/blog/lottie/animation.png' %}" alt="Animation"
+      style="width: 100%; margin-top: 40px; margin-bottom: 30px;">
+
+    <p>
+      After rendering the animation with the LottieFiles plugin, I got a JSON file. Now it's time for some coding
+      (copying
+      and pasting). I headed to the <a href="https://lottiefiles.com/web-player" target="_blank">Lottie Web Player</a>
+      and copied the generated code.
+    </p>
+
+    <pre><code>&lt;script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"&gt;&lt;/script&gt;
+&lt;lottie-player src="https://lottie.host/272b60dd-462d-42a3-8ed6-fec4143633d6/X4FxBascRI.json" background="transparent"
+speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop controls autoplay&gt;&lt;/lottie-player&gt;</code></pre>
+
+    <p>
+      I pasted the script tag to the head section of my HTML file and the lottie-player tag to the body section. I have
+      modified the source of the lottie-player tag to point to the JSON file I got from the plugin. I removed controls,
+      added margins, and set the display property to block to center the animation.
+    </p>
+
+    <pre><code>&lt;lottie-player src="{% static 'img/blog/lottie/ball.json' %}" background="transparent" speed="1" style="width: 300px; height: 300px; display: block; margin-left: auto;
+margin-right: auto;" direction="1" mode="normal" loop autoplay&gt;&lt;/lottie-player&gt;</code></pre>
+
+    <h3>The Result</h3>
+    <p>Don't look at it too much though, it gets very annoying after a while.</p>
+
+    <lottie-player src="{% static 'img/blog/lottie/ball.json' %}" background="transparent" speed="1"
+      style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto;" direction="1"
+      mode="normal" loop autoplay></lottie-player>
+
+    <h2>Modifiying the Parameters with JavaScript</h2>
+    <p>
+      There are few parameters in the lottie-player, as you can see, and I want to try to change the <i>speed</i>
+      parameter using a slider. I found this <a
+        href="https://lottiefiles.com/animations/running-pigeon-4t7T41Sjxj">running pigeon animation</a> on LottieFiles
+      and thought it would be funny to see it run faster. The animation looks amazing; credits goes to the <a
+        href="https://lottiefiles.com/creatopotato">artist</a>.
+    </p>
+
+    <pre><code>&lt;lottie-player id="examplePigeon" src="https://lottie.host/cc6c9ef5-209d-46e6-84ab-492a74d5c7d5/bBtcABFuWj.json"
+background="transparent" speed="1"
+style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 30px;" direction="1"
+mode="normal" loop autoplay&gt;&lt;/lottie-player&gt;</code></pre>
+
+    <lottie-player id="examplePigeon" src="https://lottie.host/cc6c9ef5-209d-46e6-84ab-492a74d5c7d5/bBtcABFuWj.json"
+      background="transparent" speed="1"
+      style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 30px;"
+      direction="1" mode="normal" loop autoplay></lottie-player>
+
+
+
+    <p>
+      Then I created this range slider, which has a min value of 0.5 and a max value of 2.5. I set the step value to 0.1
+      so that the slider can be more precise. I also set the default value to 1 (It is doing nothing right now, by the way).
+    </p>
+
+    <pre><code>&lt;input type="range" min="0.5" max="2.5" step="0.1" value="1" id="exampleSlider"&gt;</code></pre>
+
+    <input type="range" min="0.5" max="2.5" step="0.1" value="1" id="exampleSlider"
+      style="margin-top: 10px; display: block; margin-left: auto; margin-right: auto;">
+
+    <p>
+      Now it's time to write some JavaScript code. I selected the lottie-player and the slider with the
+      <i>getElementById</i> method. Then I added an <i>input</i> event listener to the slider. The event listener calls
+      the <i>setSpeed</i> method of the lottie-player and sets the speed to the value of the slider.
+    </p>
+
+    <pre><code>&lt;script&gt;
+// Selecting the Lottie player and the slider
+var lottiePlayer = document.getElementById('pigeonPlayer');
+var speedSlider = document.getElementById('speedSlider');
+
+// Adding an 'input' event listener to the slider
+speedSlider.addEventListener('input', function () {
+  // Setting the speed of the Lottie player to the value of the slider
+  lottiePlayer.setSpeed(speedSlider.value);
+});
+&lt;/script&gt;</code></pre>
+
+    <p>
+      After adding the script tag to the bottom of the body section, the slider should work.
+    </p>
+
+    <h3>The Result</h3>
+    <p>
+      Move the slider to the right to see the pigeon go nuts.
+    </p>
+
+    <lottie-player id="pigeonPlayer" src="https://lottie.host/cc6c9ef5-209d-46e6-84ab-492a74d5c7d5/bBtcABFuWj.json"
+      background="transparent" speed="1"
+      style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 30px;"
+      direction="1" mode="normal" loop autoplay></lottie-player>
+
+    <input type="range" min="0.5" max="2.5" step="0.1" value="1" id="speedSlider"
+      style="margin-top: 10px; display: block; margin-left: auto; margin-right: auto;">
+
+    <hr style="margin-bottom: 30px;">
+    <a href="{% url 'core:blog' %}"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the blogs</a>
+  </div>
+  <script>
+    // Select the Lottie player and the slider
+    var lottiePlayer = document.getElementById('pigeonPlayer');
+    var speedSlider = document.getElementById('speedSlider');
+
+    // Add an 'input' event listener to the slider
+    speedSlider.addEventListener('input', function () {
+      // Set the speed of the Lottie player to the value of the slider
+      lottiePlayer.setSpeed(speedSlider.value);
+    });
+  </script>
+</body>

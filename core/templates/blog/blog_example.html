@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- code highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+  <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script>
+
+  <title>Blog Post Template For Web - Çağrı Gökpunar</title>
+  <meta name="description" content="Çağrı Gökpunar's personal website.">
+  <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+  <meta name="author" content="Çağrı Gökpunar">
+</head>
+
+<body class="blog">
+  <div>
+    <h1>Lorem Ipsum Dolor Sit Amet</h1>
+    <p style="margin-bottom: 20px;">Çağrı Gökpunar - Dec 2023</p>
+    <a class="twitter-share-button" target="_blank"
+      href="https://twitter.com/intent/tweet?text=Lorem%20Ipsum%20Dolor%20Sit%20Amet%20&url=https%3A%2F%2Fcagrigokpunar.com%2Fblog%2Fexample%2F"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-brands fa-x-twitter" style="color: #ffffff;"></i> Share</a> <a
+      href="https://www.buymeacoffee.com/mpospirit" target="_blank"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-solid fa-mug-hot" style="color: #ffffff;"></i> Buy me a coffee</a>
+    <p style="margin-bottom: 30px; margin-top: 20px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+      explicabo, ad
+      earum quasi consectetur sapiente, facilis beatae tempora aspernatur expedita molestiae ipsum officia autem
+      obcaecati vero harum, fuga odio. Et.</p>
+
+    <a href="{% url 'core:blog' %}"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the blogs</a>
+
+    <hr style="margin-top: 30px;">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, et expedita. Minima
+      cumque libero quia similique vitae in tempore quo, illo nostrum dolorem, quis natus quisquam fugit molestias
+      tempora maxime?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus exercitationem soluta error. Nulla corporis
+      incidunt ex vel? Porro numquam alias saepe! Placeat ipsam doloremque libero aliquid magnam sequi dolorem dicta?
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas eveniet itaque expedita veritatis blanditiis
+      possimus enim deleniti, quia fugit odit sunt minus, libero, quae quod fuga vel maiores quam eum.</p>
+    <!-- image -->
+    <img src="{% static 'img/thesis/brain.jpg' %}" alt="Blog Example"
+      style="width: 100%; margin-top: 40px; margin-bottom: 30px; display: block; margin-left: auto; margin-right: auto;">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, id? Id accusamus voluptate voluptatem facere non
+      illo fuga, veniam, iure assumenda reprehenderit nulla sunt velit similique in libero minima alias?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse repellat quasi adipisci quo laborum accusamus quam
+      perspiciatis excepturi deserunt aperiam corrupti, laudantium accusantium eaque nisi possimus praesentium non
+      distinctio! Harum?</p>
+    <ul>
+      <li>Lorem</li>
+      <li>Ipsum</li>
+      <li>Dolor</li>
+      <li>Sit</li>
+      <li>Amet</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, modi sed consequatur omnis eveniet nihil fuga
+      perspiciatis iure, perferendis saepe nemo ea mollitia! Inventore tempore corporis, omnis a reiciendis officiis.
+    </p>
+
+    <style>.hljs-attribute{color:#880000;}.hljs-keyword{color:#444444;}.hljs-selector-attr{color:#78A960;}.hljs-comment{color:#888888;}.hljs-section{font-weight:bold;color:#880000;}.hljs-built_in{color:#397300;}.hljs-template-variable{color:#78A960;}.hljs-literal{color:#397300;}.hljs-type{color:#880000;}.hljs-emphasis{font-style:italic;}.hljs-doctag{color:#444444;}.hljs-deletion{color:#880000;}.hljs-name{color:#444444;}.hljs-title{color:#880000;font-weight:bold;}.hljs-attr{color:#1F7199;}.hljs-code{color:#397300;}.hljs-meta{color:#1F7199;}.hljs-quote{color:#880000;}.hljs-strong{font-weight:bold;}.hljs-number{color:#880000;}.hljs-template-tag{color:#880000;}.hljs-link{color:#78A960;}.hljs-symbol{color:#78A960;}.hljs-regexp{color:#78A960;}.hljs-string{color:#880000;}.hljs{display:block;overflow-x:auto;color:#444444;padding:0.5em;}.hljs-variable{color:#78A960;}.hljs-meta-keyword{color:#78A960;}.hljs-selector-pseudo{color:#78A960;}.hljs-addition{color:#397300;}.hljs-selector-tag{color:#444444;}.hljs-function{color:#1F7199;}.hljs-selector-id{color:#880000;}.hljs-selector-class{color:#880000;}.hljs-bullet{color:#397300;}.hljs-subst{color:#444444;}</style><pre><code class="hljs" style="background:#F0F0F0;border-radius:8px">&lt;script src=<span class="hljs-string">"https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"</span>&gt;&lt;/script&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">lottie-player</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://lottie.host/272b60dd-462d-42a3-8ed6-fec4143633d6/X4FxBascRI.json"</span> <span class="hljs-attr">background</span>=<span class="hljs-string">"transparent"</span>
+<span class="hljs-attr">speed</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 300px; height: 300px"</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">"normal"</span> <span class="hljs-attr">loop</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">autoplay</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">lottie-player</span>&gt;</span></span></code></pre>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto iusto officia quae tenetur sunt neque
+      repellendus aspernatur ex. Nisi temporibus soluta dolor accusamus deserunt, sapiente molestias eaque voluptates
+      odio ducimus.</p>
+
+    <hr style="margin-bottom: 30px;">
+    <a href="{% url 'core:blog' %}"
+      style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+        class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the blogs</a>
+  </div>
+</body>

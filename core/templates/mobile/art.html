@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- 
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (mobile) {
+                alert("This website is designed to be experienced on a desktop. Please visit on a desktop device. -Çağrı");
+            } else {
+
+            }
+        }
+    </script> -->
+
+    <title>Çağrı Gökpunar - Art</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+
+</head>
+
+<body class="mobile">
+    <div>
+        <h1>Art</h1>
+            <p>I make paintings and music.</p>
+            <p style="margin-bottom: 20px; margin-top: 0;">My focuses are portraits and electronic music.</p>
+            <iframe style="justify-content: center;"
+						src="https://open.spotify.com/embed/artist/2ARdu6Z3kTuoeex8v9yqQ5?utm_source=generator&theme=0"
+						width="100%" height="400" frameBorder="0" allowfullscreen=""
+						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+						loading="lazy"></iframe>
+            
+            <h3 style="color: #701414; margin-top: 30px;">Galadrimel</h3>
+            <p style="margin-top: 0;">Digital art</p>
+            <img src="{% static 'img/portfolio-1.jpg' %}" alt="Galadrimel" style="width: 100%; margin-bottom: 20px;">
+
+            <h3 style="color: #701414;">My Grandma</h3>
+            <p style="margin-top: 0;">Oil on canvas</p>
+            <img src="{% static 'img/portfolio-2.jpg' %}" alt="My Grandma" style="width: 100%; margin-bottom: 20px;">
+
+            <h3 style="color: #701414;">Self-Portrait</h3>
+            <p style="margin-top: 0;">Oil pastels on craft</p>
+            <img src="{% static 'img/portfolio-3.jpg' %}" alt="Self-Portrait" style="width: 100%; margin-bottom: 20px;">
+
+            <h3 style="color: #701414;">Arthur Morgan</h3>
+            <p style="margin-top: 0;">Digital art</p>
+            <img src="{% static 'img/portfolio-4.jpg' %}" alt="Arthur Morgan" style="width: 100%; margin-bottom: 40px;">
+
+                        
+            <a href="{% url 'core:index' %}"
+                style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+                    class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the home page</a>
+    </div>
+</body>
+
+</html>

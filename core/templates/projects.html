@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <title>Çağrı Gökpunar - Projects</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div style="text-align: right; margin-right: 100px;">
+            <h1>Projects</h1>
+
+            <h2 style="color: #701414;">Cortex</h2>
+            <p><b>No-code CRM Tool</b></p>
+            <p style="margin-bottom: 10px;">I created this tool from scratch using the Python<br>library Streamlit and hosted it on Amazon EC2.</p>
+            <ul style="margin-bottom: 20px; list-style-position: inside;">
+                <li style="margin-bottom: 10px;">Business units can access very specific masses with many different
+                    filters,<br>
+                    manage campaigns, analyze masses, and predict mass campaign response<br>
+                    rates with the trained
+                    machine learning model.
+                </li>
+                <li>This project has increased the work speed of the entire commercial team<br>by
+                    reducing the response
+                    time to requests from days to seconds.
+                </li>
+            </ul>
+
+            <h2 style="color: #701414;">IRRBB Tool</h2>
+            <p><b>Interest Rate Risk in the Banking Book Calculation</b></p>
+            <p style="margin-bottom: 10px;">An international project where I created a tool to calculate<br>interest rates depending on the different shock scenarios.</p>
+            <ul style="margin-bottom: 20px; list-style-position: inside;">
+                <li style="margin-bottom: 10px;">I used pandas in the backend to perform very complex calculations. <br>
+                    The previous painful calculation process was simplified with minimal <br>user inputs and a friendly UI.
+                </li>
+                <li>Django is the preferred library for the backend because of its fast <br>development pace and integration with data manipulation libraries.
+                </li>
+            </ul>
+
+            <h2 style="color: #701414;">Dextera Vision</h2>
+            <p><b>ML and ETL Made Easy</b></p>
+            <p style="color: #a0a0a0;">Personal project - Ongoing</p>
+            <p style="margin-bottom: 10px;">I lead a software as a product project focused on simplifying machine <br>learning and ETL (extract, transform, and load) processes further for <br>everyone to use.</p>
+            <ul style="margin-bottom: 20px; list-style-position: inside;">
+                <li style="margin-bottom: 10px;">AWS is used for hosting and cloud computing since machine learning <br>
+                    algorithms rely on powerful computers.
+                </li>
+                <li>Provides the user with extra controls depending on experience.
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 style="color: #701414;">Analytical Works</h2>
+            <p><b>Crucial analytics for decision making</b></p>
+            <p style="margin-bottom: 10px;">I created the dashboards and reports that got the company to focus on <br>these issues and dramatically improve its KPIs.</p>
+            <ul style="margin-bottom: 20px; list-style-position: inside;">
+                <li style="margin-bottom: 10px;"><b>Availability Report:</b> A dashboard of SKU availability for each retailer. <br>
+                    This dashboard is based on a complicated yet efficient algorithm that <br>determines whether a product is sellable or not.
+                </li>
+                <li style="margin-bottom: 10px;"><b>Cancellations Dashboard:</b> Super detailed dashboard of order <br>cancellation reasons, sources and statistics. The number of order <br>cancellations halved after the dashboard was published.
+                </li>
+                <li><b>Other:</b> Cause of change, cohort, like-for-like, segmentation, funnel, <br>click-stream, AHP (analytical hierarchy process), A/B testing, etc.</li>
+            </ul>
+
+            <h2 style="color: #701414; margin-bottom: 5px;">Other Projects</h2>
+            <ul style="margin-bottom: 40px; list-style-position: inside;">
+                <li style="margin-bottom: 5px;"><b>PwC Trainer:</b> Teaching Python and its frameworks to the client and team
+                </li>
+                <li style="margin-bottom: 5px;"><b>Strategic Consulting:</b> Data-driven expansion strategies
+                </li>
+                <li style="margin-bottom: 5px;"><b>Distributor Location Optimization:</b> Calculating the optimal location
+                </li>
+                <li style="margin-bottom: 5px;"><b>Mobile App:</b> Mobile app for dashboards and statistics
+                </li>
+                <li style="margin-bottom: 5px;"><b>Distributor Panel:</b> Live statistics panel
+                </li>
+                <li style="margin-bottom: 5px;"><b>DnA Platform:</b> Internal platform for the team
+                </li>
+                <li style="margin-bottom: 5px;"><b><a href="https://sözcük.app" target="_blank" style="text-decoration: none; color: #701414;">sözcük.app</a> (Personal project):</b> Daily word puzzle (Click <a href="https://sözcük.app" target="_blank" style="text-decoration: none; color: #701414;"><b>here</b> </a> to play)
+                </li>
+            </ul>
+
+            <a href="{% url 'core:index' %}"
+                style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+                    class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the home page</a>
+        </div>
+    </div>
+</body>
