@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- 
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (mobile) {
+                alert("This website is designed to be experienced on a desktop. Please visit on a desktop device. -Çağrı");
+            } else {
+
+            }
+        }
+    </script> -->
+
+    <title>Çağrı Gökpunar - Tech Stack</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+
+</head>
+
+<body class="mobile">
+    <div>
+        <h1>Tech Stack</h1>
+            <style type="text/css">
+                .tg  {border:none;border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+                .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:0px;
+                  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:0px;
+                  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg .tg-baqh{text-align:left;vertical-align:center}
+                .tg .tg-t6mk{background-color:#e9e8e6;text-align:right;vertical-align:center}
+                .tg .tg-i6kb{background-color:#e9e8e6;text-align:left;vertical-align:center}
+                .tg .tg-lqy6{text-align:right;vertical-align:center}
+                .tg .tg-0e1h{background-color:#ffffff;color:#701414;font-weight:bold;text-align:right;vertical-align:center}
+                .tg .tg-6ve6{background-color:#ffffff;color:#701414;font-weight:bold;text-align:left;vertical-align:center}
+                </style>
+                <table class="tg" style="table-layout: fixed; margin-bottom: 40px;">
+                <colgroup>
+                <col style="width: 141px">
+                <col style="width: 235px">
+                <col style="width: 188px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="tg-0e1h"><h3>Domain</h3></th>
+                    <th class="tg-6ve6"><h3>Preferred</h3></th>
+                    <th class="tg-6ve6"><h3>Can handle</h3></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-t6mk">Machine Learning</td>
+                    <td class="tg-i6kb">scikit-learn, Tensorflow, Keras</td>
+                    <td class="tg-i6kb">PyTorch</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-lqy6">Data Manipulation and Analysis</td>
+                    <td class="tg-baqh">pandas, polars, plotly</td>
+                    <td class="tg-baqh">seaborn, cufflinks, Alteryx</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-t6mk">Database Management</td>
+                    <td class="tg-i6kb">SQL</td>
+                    <td class="tg-i6kb">MongoDB, DynamoDB</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-lqy6">Data Visualization</td>
+                    <td class="tg-baqh">PowerBI, QuickSight</td>
+                    <td class="tg-baqh">Tableau, Looker</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-t6mk">Backend Development</td>
+                    <td class="tg-i6kb">Django</td>
+                    <td class="tg-i6kb">-</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-lqy6">Frontend Development</td>
+                    <td class="tg-baqh">Vanilla JS</td>
+                    <td class="tg-baqh">-</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-t6mk">Cloud</td>
+                    <td class="tg-i6kb">AWS</td>
+                    <td class="tg-i6kb">Azure, DigitalOcean</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-lqy6">Operations Research</td>
+                    <td class="tg-baqh">-</td>
+                    <td class="tg-baqh">Pyomo, Ortools, PuLP, SCIP</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-t6mk">Mobile Development</td>
+                    <td class="tg-i6kb">-</td>
+                    <td class="tg-i6kb">Flutter, Swift</td>
+                  </tr>
+                </tbody>
+                </table>
+
+        <a href="{% url 'core:index' %}"
+            style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+                class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the home page</a>
+    </div>
+</body>
+
+</html>
