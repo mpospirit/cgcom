@@ -1,0 +1,327 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <title>Çağrı Gökpunar - Reviews</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+
+    <style>
+        .collapsible {
+            background-color: #701414;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .content {
+            padding: 0 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #e9e8e6;
+        }
+    </style>
+
+</head>
+
+<body style="margin-top: 40px; margin-left: 25%; margin-right: 25%; margin-bottom: 60px;">
+    <div>
+        <h1>Reviews</h1>
+        <h2 style="color: #701414;">Game Reviews</h2>
+        <p style="margin-bottom: 10px;">I love video games, and I recently decided to review them.</p>
+
+        <button class="collapsible">Click to expand evaluation metrics</button>
+        <div class="content">
+            <div style="margin-bottom: 10px;">
+                <h3 style="margin-top: 10px;">Method</h3>
+                <p style="margin-top: 0;">I utilized the analytical hierarchy process (AHP) to compute the coefficients for each criterion. I grade the games on a scale of 1 to 10 for each criterion, and then I multiply the ratings by the coefficients. After adding all the products, I calculate the ultimate score for each game.</p>
+                <h3 style="margin-top: 20px;">Coefficients</h3>
+                <table style="font-weight: bold; justify-content: center; width: 100%; margin-top: 20px; margin-bottom: 20px;">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: right; color: #701414; width: 55%;">Gameplay: </td>
+                            <td>6.5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;">Storytelling: </td>
+                            <td>7.3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;">Character Design: </td>
+                            <td>23.6</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;">Graphics: </td>
+                            <td>10.3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;">Sound Design: </td>
+                            <td>9.4</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;">Suspense: </td>
+                            <td>13.3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;">Difficulty: </td>
+                            <td>6.5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;">Replayability: </td>
+                            <td>1.7</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;">Emotional Impact: </td>
+                            <td>4.5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;">Performance: </td>
+                            <td>17.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Example</h3>
+                <p>Here is my Dead Cells ratings:</p>
+                <div style="display: flex; margin-bottom: 20px; margin-top: 20px;">
+                    <div style="flex: 40%">
+                        <table style="font-weight: bold; justify-content: center; width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Gameplay: </td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Storytelling: </td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Character Design: </td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Graphics: </td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Sound Design: </td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Suspense: </td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Difficulty: </td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Replayability: </td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Emotional Impact: </td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Performance: </td>
+                                    <td>9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="flex: 60%; justify-content: center; text-align: center; display: flex; align-items: center;">
+                        <div>
+                            <p style="font-size: 72px;">87</p>
+                            <p style="color: #701414; font-weight: bold;">Overall Rating</p>
+                        </div>
+                    </div>
+                </div>
+                <p>And this is how I evaluate it:</p>
+                <table style="justify-content: center; width: 100%; margin-top: 20px; margin-bottom: 20px;">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: right; color: #701414; font-weight: bold;">Criterion</td>
+                            <td style="text-align: center; color: #701414; font-weight: bold;">Coefficient</td>
+                            <td style="text-align: center; color: #701414; font-weight: bold;">Rating</td>
+                            <td style="text-align: center; color: #701414; font-weight: bold;">Coef X Rat</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Gameplay</td>
+                            <td style="text-align: center;">6.5</td>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">65</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Storytelling</td>
+                            <td style="text-align: center;">7.3</td>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">43.8</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Character Design</td>
+                            <td style="text-align: center;">23.6</td>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">212.4</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Graphics</td>
+                            <td style="text-align: center;">10.3</td>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">103</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Sound Design</td>
+                            <td style="text-align: center;">9.4</td>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">84.6</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Suspense</td>
+                            <td style="text-align: center;">13.3</td>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">106.4</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Difficulty</td>
+                            <td style="text-align: center;">6.5</td>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">58.5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Replayability</td>
+                            <td style="text-align: center;">1.7</td>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">17</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Emotional Impact</td>
+                            <td style="text-align: center;">4.5</td>
+                            <td style="text-align: center;">7</td>
+                            <td style="text-align: center;">31.5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Performance</td>
+                            <td style="text-align: center;">17.0</td>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">153.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>If you calculate the sum of the Coefficient X Rating column, you will get 875.2. Divide it by 10 and convert it to an integer to get the overall rating: 87.</p>
+            </div>
+        </div>
+
+        <p style="margin-bottom: 20px; margin-top: 10px;">Here is the list:</p>
+
+        {% for review in game_reviews %}
+        <div style="display: flex; margin-top: 30px;">
+            <div style="flex: 75%; margin-right: 20px;">
+                <h2>{{ review.gameName }}</h2>
+                <p style="margin-bottom: 20px;">Release year: {{ review.yearPublished }}</p>
+                <p style="margin-bottom: 20px; text-align: justify;">{{ review.notes }}</p>
+                <div style="display: flex; margin-bottom: 20px;">
+                    <div style="flex: 40%">
+                        <table style="font-weight: bold; justify-content: center; width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Gameplay: </td>
+                                    <td>{{ review.gameplay }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Storytelling: </td>
+                                    <td>{{ review.storytelling }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Character Design: </td>
+                                    <td>{{ review.characterDesign }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Graphics: </td>
+                                    <td>{{ review.graphics }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Sound Design: </td>
+                                    <td>{{ review.soundDesign }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Suspense: </td>
+                                    <td>{{ review.suspense }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Difficulty: </td>
+                                    <td>{{ review.difficulty }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Replayability: </td>
+                                    <td>{{ review.replayability }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Emotional Impact: </td>
+                                    <td>{{ review.emotionalImpact }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; color: #701414;">Performance: </td>
+                                    <td>{{ review.performance }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div
+                        style="flex: 60%; justify-content: center; text-align: center; display: flex; align-items: center;">
+                        <div>
+                            <p style="font-size: 72px;">{{ review.overallRating }}</p>
+                            <p style="color: #701414; font-weight: bold;">Overall Rating</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center;">I have played this game for about {{ review.hoursPlayed }} hours.</p>
+            </div>
+            <div style="flex: 25%;">
+                <img style="width: 100%; height: 100%; object-fit: cover; overflow: hidden" src="{{ review.imgLink }}">
+            </div>
+
+        </div>
+        {% endfor %}
+
+        <p style="margin-bottom: 40px; margin-top: 40px;">That's all for now. In the future, I might add more
+            reviews—not just for games, though I'm not sure what those would be about. I guess we will never know.</p>
+
+        <a href="{% url 'core:index' %}"
+            style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+                class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the home page</a>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

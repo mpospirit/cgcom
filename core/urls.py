@@ -11,6 +11,7 @@ urlpatterns = [
     # path("skills/", views.skills, name="skills"),
     path("tech-stack/", views.tech_stack, name="tech_stack"),
     path("art/", views.art, name="art"),
+    path("reviews/", views.reviews, name="reviews"),
     path("thesis/", views.thesis, name="thesis"),
     path("blog/", views.blog, name="blog"),
     path("blog/example/", views.blog_example, name="blog_example"),

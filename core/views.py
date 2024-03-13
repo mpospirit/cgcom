@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django_user_agents.utils import get_user_agent
 from datetime import datetime
-from .models import BlogViews
+from .models import BlogViews, GameReviews
 
 
 def index(request):
@@ -24,6 +24,7 @@ def about(request):
     else:
         return render(request, "about.html", locals())
 
+
 # def projects(request):
 #     user_agent = get_user_agent(request)
 #     # If the user is a mobile device, rendering the mobile template
@@ -41,7 +42,8 @@ def about(request):
 #     # Otherwise, rendering the desktop template
 #     else:
 #         return render(request, "skills.html", locals())
-    
+
+
 def tech_stack(request):
     user_agent = get_user_agent(request)
     # If the user is a mobile device, rendering the mobile template
@@ -62,6 +64,23 @@ def art(request):
         return render(request, "art.html", locals())
 
 
+def reviews(request):
+    user_agent = get_user_agent(request)
+
+    game_reviews = GameReviews.objects.all()
+    # Reversing the order of the reviews
+    game_reviews = game_reviews[::-1]
+
+    context = {"game_reviews": game_reviews}
+
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/reviews.html", context)
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "reviews.html", context)
+
+
 def thesis(request):
     user_agent = get_user_agent(request)
 
@@ -74,20 +93,15 @@ def thesis(request):
 
     # Saving the user's IP address and user agent to the database
     BlogViews.objects.create(
-        blogId=1, 
-        dateCreated=datetime.now(),
-        ipAddress=ip, 
-        userAgent=user_agent
+        blogId=1, dateCreated=datetime.now(), ipAddress=ip, userAgent=user_agent
     )
 
     # Calculating the total number of views
     total_views = BlogViews.objects.filter(blogId=1).count()
 
     # Passing the total number of views to the template
-    context = {
-        "total_views": total_views
-    }
-    
+    context = {"total_views": total_views}
+
     # If the user is a mobile device, rendering the mobile template
     if user_agent.is_mobile or user_agent.is_tablet:
         return render(request, "mobile/thesis.html", context)
@@ -128,19 +142,14 @@ def blog_lottie(request):
 
     # Saving the user's IP address and user agent to the database
     BlogViews.objects.create(
-        blogId=2, 
-        dateCreated=datetime.now(),
-        ipAddress=ip, 
-        userAgent=user_agent
+        blogId=2, dateCreated=datetime.now(), ipAddress=ip, userAgent=user_agent
     )
 
     # Calculating the total number of views
     total_views = BlogViews.objects.filter(blogId=2).count()
 
     # Passing the total number of views to the template
-    context = {
-        "total_views": total_views
-    }
+    context = {"total_views": total_views}
     # If the user is a mobile device, rendering the mobile template
     if user_agent.is_mobile or user_agent.is_tablet:
         return render(request, "mobile/blog/blog_lottie.html", context)
