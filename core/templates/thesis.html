@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
@@ -29,9 +29,9 @@
     <meta name="author" content="Çağrı Gökpunar">
 </head>
 
-<body style="background-color: #e9e8e6;">
+<body class="blog">
     <div class="wrapper">
-        <div style="text-align: right; margin-right: 100px;">
+        <div>
             <h1>Mathematical</h1>
             <h1>Artificial</h1>
             <h1>Intelligence</h1>
@@ -50,7 +50,7 @@
             <p style="margin-top: 40px;"><i class="fa-solid fa-arrow-down fa-bounce" style="color: #701414;"></i> Scroll
                 down to start reading <i class="fa-solid fa-arrow-down fa-bounce" style="color: #701414;"></i></p>
         </div>
-        <div>
+        <!-- <div>
             <h1>Table of Contents</h1>
 
             <a href="#Introduction">
@@ -179,9 +179,9 @@
             <a href="#References">
                 <h2>References</h2>
             </a>
-        </div>
+        </div> -->
     </div>
-    <div style="margin-left: 25%; margin-right: 25%;">
+    <div>
         <a name="Introduction">
             <h1 style="margin-top: 20px;">Introduction</h1>
         </a>

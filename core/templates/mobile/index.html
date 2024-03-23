@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
@@ -37,19 +37,19 @@
             <p id="alsoknownas" style="margin-bottom: 10px;"></p>
             <p style="margin-bottom: 20px;">Analyst / Developer / Artist</p>
             <div style="margin-bottom: 20px; font-size: 36px;">
-                <a href="https://www.linkedin.com/in/cagrigokpunar/" target="_blank"><i class="fa-brands fa-linkedin"
+                <a href="https://www.linkedin.com/in/cagrigokpunar/" target="_blank"><i class="change-in-dark fa-brands fa-linkedin"
                         style="color: #701414;"></i></a>
-                <a href="https://github.com/mpospirit" target="_blank"><i class="fa-brands fa-github"
+                <a href="https://github.com/mpospirit" target="_blank"><i class="change-in-dark fa-brands fa-github"
                         style="color: #701414;"></i></a>
-                <a href="https://twitter.com/mpospirit" target="_blank"><i class="fa-brands fa-square-x-twitter"
+                <a href="https://twitter.com/mpospirit" target="_blank"><i class="change-in-dark fa-brands fa-square-x-twitter"
                         style="color: #701414;"></i></a>
-                <a href="https://instagram.com/mpospirit" target="_blank"><i class="fa-brands fa-square-instagram"
+                <a href="https://instagram.com/mpospirit" target="_blank"><i class="change-in-dark fa-brands fa-square-instagram"
                         style="color: #701414;"></i></a>
                 <a href="https://open.spotify.com/artist/2ARdu6Z3kTuoeex8v9yqQ5" target="_blank"><i
-                        class="fa-brands fa-spotify" style="color: #701414;"></i></a>
+                        class="change-in-dark fa-brands fa-spotify" style="color: #701414;"></i></a>
             </div>
             <p><a href="mailto:cagrigokbusiness@gmail.com" style="text-decoration: none; color: inherit;">
-                    <i class="fa-solid fa-envelope" style="color: #701414; margin-bottom: 40px;"></i>
+                    <i class="change-in-dark fa-solid fa-envelope" style="color: #701414; margin-bottom: 40px;"></i>
                     cagrigokbusiness@gmail.com
                 </a></p>
 
@@ -77,7 +77,7 @@
             </div>
 
             <div>
-                <a href="https://www.buymeacoffee.com/mpospirit" target="_blank"><i class="fa-solid fa-mug-hot"
+                <a href="https://www.buymeacoffee.com/mpospirit" target="_blank"><i class="change-in-dark fa-solid fa-mug-hot"
                         style="color: #701414;"></i> Buy me a coffee</a>
             </div>
 
@@ -88,6 +88,7 @@
 
 
             <p style="margin-top: 40px;">Mar 2024</p>
+            <p id="switchButton" style="cursor: pointer; margin-top: 50px;"><i class="change-in-dark fa-solid fa-lightbulb" style="color: #701414;"></i></p>
         </div>
     </div>
 
@@ -114,6 +115,52 @@
             .pause(2000)
             .delete(4)
             .go();
+
+            document.addEventListener('DOMContentLoaded', function () {
+            var switchButton = document.getElementById('switchButton');
+            var stylesheet = document.getElementById('stylesheet');
+            var icons = document.getElementsByClassName('change-in-dark');
+
+            // Check if the user has set their device to use a dark color scheme
+            var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            // Load the theme from localStorage or set it based on the user's device setting
+            var theme = localStorage.getItem('theme');
+            if (theme) {
+                stylesheet.href = theme;
+                changeIconColor(theme);
+            } else if (prefersDarkScheme) {
+                stylesheet.href = "{% static 'css/style_dark.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+                changeIconColor("{% static 'css/style_dark.css' %}");
+            } else {
+                stylesheet.href = "{% static 'css/style.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style.css' %}");
+                changeIconColor("{% static 'css/style.css' %}");
+            }
+
+            switchButton.addEventListener('click', function () {
+                if (stylesheet.href.includes('style.css')) {
+                    stylesheet.href = "{% static 'css/style_dark.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+                    changeIconColor("{% static 'css/style_dark.css' %}");
+                } else {
+                    stylesheet.href = "{% static 'css/style.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style.css' %}");
+                    changeIconColor("{% static 'css/style.css' %}");
+                }
+            });
+
+            function changeIconColor(theme) {
+                for (var i = 0; i < icons.length; i++) {
+                    if (theme.includes('style_dark.css')) {
+                        icons[i].style.color = '#ffffff';
+                    } else {
+                        icons[i].style.color = '#701414';
+                    }
+                }
+            }
+        });
     </script>
 </body>
 

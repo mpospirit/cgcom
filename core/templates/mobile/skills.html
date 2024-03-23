@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
 
@@ -84,6 +84,38 @@
             style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
                 class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the home page</a>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var switchButton = document.getElementById('switchButton');
+            var stylesheet = document.getElementById('stylesheet');
+
+            // Check if the user has set their device to use a dark color scheme
+            var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            // Load the theme from localStorage or set it based on the user's device setting
+            var theme = localStorage.getItem('theme');
+            if (theme) {
+                stylesheet.href = theme;
+            } else if (prefersDarkScheme) {
+                stylesheet.href = "{% static 'css/style_dark.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+            } else {
+                stylesheet.href = "{% static 'css/style.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style.css' %}");
+            }
+
+            switchButton.addEventListener('click', function () {
+                if (stylesheet.href.includes('style.css')) {
+                    stylesheet.href = "{% static 'css/style_dark.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+                } else {
+                    stylesheet.href = "{% static 'css/style.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style.css' %}");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

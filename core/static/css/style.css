@@ -1,11 +1,25 @@
-* {
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+b,
+li,
+a,
+ul,
+ol,
+img,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
     background-color: #ffffff;
 }
 
@@ -31,7 +45,13 @@ a {
     margin-right: 25%;
     margin-bottom: 60px;
     text-align: justify;
-    background-color: #e9e8e6;
+    /* background-color: #e9e8e6; */
+    font-family: Georgia, Times, serif;
+    background-image: url('../img/paper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .blog_mobile {
@@ -39,7 +59,13 @@ a {
     margin-right: 5%;
     margin-bottom: 60px;
     text-align: justify;
-    background-color: #e9e8e6;
+    /* background-color: #e9e8e6; */
+    font-family: Georgia, Times, serif;
+    background-image: url("../img/paper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .mobile {

@@ -1,3 +1,4 @@
+/* I know a about the :root selector, but it was too late to implement it. */
 h1,
 h2,
 h3,
@@ -13,14 +14,16 @@ img,
 hr {
     margin: 0;
     padding: 0;
+    color: #ffffff;
 }
 
 body {
+    background-color: #202020;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
+    color: #ffffff;
 }
 
 a {
@@ -45,13 +48,7 @@ a {
     margin-right: 25%;
     margin-bottom: 60px;
     text-align: justify;
-    /* background-color: #e9e8e6; */
-    font-family: Georgia, Times, serif;
-    background-image: url('../img/paper.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #c9c6c0;
 }
 
 .blog_mobile {
@@ -59,13 +56,7 @@ a {
     margin-right: 5%;
     margin-bottom: 60px;
     text-align: justify;
-    /* background-color: #e9e8e6; */
-    font-family: Georgia, Times, serif;
-    background-image: url("../img/paper.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #c9c6c0;
 }
 
 .mobile {

@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
 
@@ -32,7 +32,8 @@
 <body class="mobile">
     <div>
         <h1>About</h1>
-        <img src="{% static 'img/pp.jpg' %}" alt="Çağrı Gökpunar" style="width: 100%; margin-bottom: 30px; display: block; margin-left: auto; margin-right: auto;">
+        <img src="{% static 'img/pp.png' %}" alt="Çağrı Gökpunar"
+            style="width: 100%; margin-bottom: 30px; display: block; margin-left: auto; margin-right: auto;">
         <p>I'm a full-stack data analyst and developer who loves cooking up different
             business ideas. The
             predictive magic of statistics always keeps me hooked.
@@ -49,6 +50,37 @@
             style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
                 class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the home page</a>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var switchButton = document.getElementById('switchButton');
+            var stylesheet = document.getElementById('stylesheet');
+
+            // Check if the user has set their device to use a dark color scheme
+            var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            // Load the theme from localStorage or set it based on the user's device setting
+            var theme = localStorage.getItem('theme');
+            if (theme) {
+                stylesheet.href = theme;
+            } else if (prefersDarkScheme) {
+                stylesheet.href = "{% static 'css/style_dark.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+            } else {
+                stylesheet.href = "{% static 'css/style.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style.css' %}");
+            }
+
+            switchButton.addEventListener('click', function () {
+                if (stylesheet.href.includes('style.css')) {
+                    stylesheet.href = "{% static 'css/style_dark.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+                } else {
+                    stylesheet.href = "{% static 'css/style.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style.css' %}");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
