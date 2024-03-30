@@ -45,9 +45,9 @@ a {
     margin-right: 25%;
     margin-bottom: 60px;
     text-align: justify;
-    /* background-color: #e9e8e6; */
+    background-color: #e9e8e6;
     font-family: Georgia, Times, serif;
-    background-image: url('../img/paper.jpg');
+    /* background-image: url('../img/paper.jpg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,9 +59,9 @@ a {
     margin-right: 5%;
     margin-bottom: 60px;
     text-align: justify;
-    /* background-color: #e9e8e6; */
+    background-color: #e9e8e6;
     font-family: Georgia, Times, serif;
-    background-image: url("../img/paper.jpg");
+    /* background-image: url("../img/paper.jpg"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
