@@ -33,28 +33,30 @@
 <body>
     <div class="wrapper">
         <div class="header-container">
+            <img src="{% static 'img/favicon.gif' %}" alt="mpospirit"
+                style="width: 50%; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
             <h1>Çağrı Gökpunar</h1>
-            <p id="alsoknownas" style="margin-bottom: 10px;"></p>
+            <p style="margin-bottom: 10px;"><em>mpospirit</em></p>
 
             <p style="margin-bottom: 20px;"><strong>Analyst / Developer / Artist</strong></p>
 
             <!-- social links -->
             <div style="margin-bottom: 20px; font-size: 36px;">
-                <a href="https://www.linkedin.com/in/cagrigokpunar/" target="_blank"><i class="change-in-dark fa-brands fa-linkedin"
-                        style="color: #701414;"></i></a>
+                <a href="https://www.linkedin.com/in/cagrigokpunar/" target="_blank"><i
+                        class="change-in-dark fa-brands fa-linkedin" style="color: #701414;"></i></a>
                 <a href="https://github.com/mpospirit" target="_blank"><i class="change-in-dark fa-brands fa-github"
                         style="color: #701414;"></i></a>
-                <a href="https://twitter.com/mpospirit" target="_blank"><i class="change-in-dark fa-brands fa-square-x-twitter"
-                        style="color: #701414;"></i></a>
-                <a href="https://instagram.com/mpospirit" target="_blank"><i class="change-in-dark fa-brands fa-square-instagram"
-                        style="color: #701414;"></i></a>
+                <a href="https://twitter.com/mpospirit" target="_blank"><i
+                        class="change-in-dark fa-brands fa-square-x-twitter" style="color: #701414;"></i></a>
+                <a href="https://instagram.com/mpospirit" target="_blank"><i
+                        class="change-in-dark fa-brands fa-square-instagram" style="color: #701414;"></i></a>
                 <a href="https://open.spotify.com/artist/2ARdu6Z3kTuoeex8v9yqQ5" target="_blank"><i
                         class="change-in-dark fa-brands fa-spotify" style="color: #701414;"></i></a>
             </div>
 
-            <p><a href="mailto:cagrigokbusiness@gmail.com" style="text-decoration: none; color: inherit;">
+            <p><a href="mailto:cagri@mpospirit.com" style="text-decoration: none; color: inherit;">
                     <i class="change-in-dark fa-solid fa-envelope" style="color: #701414; margin-bottom: 40px;"></i>
-                    cagrigokbusiness@gmail.com
+                    cagri@mpospirit.com
                 </a></p>
 
             <!-- navigations  -->
@@ -85,42 +87,20 @@
             <!-- <a href="https://www.buymeacoffee.com/mpospirit" target="_blank"
                 style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
                     class="fa-solid fa-mug-hot" style="color: #ffffff;"></i> Buy me a coffee</a> -->
-            <a href="https://www.buymeacoffee.com/mpospirit" target="_blank"><i class="change-in-dark fa-solid fa-mug-hot"
-                    style="color: #701414;"></i> Buy me a coffee</a>
+            <a href="https://www.buymeacoffee.com/mpospirit" target="_blank"><i
+                    class="change-in-dark fa-solid fa-mug-hot" style="color: #701414;"></i> Buy me a coffee</a>
 
             <!-- <a href="{% static 'pdf/resume.pdf' %}" download="Çağrı Gökpunar CV"
                 style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
                     class="fa-solid fa-file-arrow-down" style="color: #ffffff;"></i> Download resume</a> -->
-            <p style="margin-top: 50px;">Mar 2024</p>
-            <p id="switchButton" style="cursor: pointer; margin-top: 50px;"><i class="change-in-dark fa-solid fa-lightbulb" style="color: #701414;"></i></p>
+            <p style="margin-top: 50px;">May 2024</p>
+            <p id="switchButton" style="cursor: pointer; margin-top: 50px;"><i
+                    class="change-in-dark fa-solid fa-lightbulb" style="color: #701414;"></i></p>
         </div>
 
     </div>
 
     <script>
-        new TypeIt("#alsoknownas", {
-            speed: 50,
-            waitUntilVisible: true,
-            loop: true,
-            cursor: false
-        })
-            .type("<em>mpospirit</em>", { delay: 300 })
-            .pause(1000)
-            .delete(9)
-            .type("<em>mpoze</em>", { delay: 300 })
-            .pause(1000)
-            .delete(5)
-            .type("<em>mpossidere</em>", { delay: 300 })
-            .pause(1000)
-            .delete(10)
-            .type("<em>masterpos</em>", { delay: 300 })
-            .pause(1000)
-            .delete(9)
-            .type("<em style='color: #701414'><b>mpos</b></em>", { delay: 300 })
-            .pause(2000)
-            .delete(4)
-            .go();
-
         document.addEventListener('DOMContentLoaded', function () {
             var switchButton = document.getElementById('switchButton');
             var stylesheet = document.getElementById('stylesheet');
@@ -166,6 +146,12 @@
                 }
             }
         });
+
+        window.onload = function () {
+            var img = document.querySelector('img');
+            var src = img.getAttribute('src');
+            img.setAttribute('src', src + '?v=' + new Date().getTime());
+        };
     </script>
 </body>
 

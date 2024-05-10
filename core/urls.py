@@ -16,4 +16,5 @@ urlpatterns = [
     path("blog/", views.blog, name="blog"),
     path("blog/example/", views.blog_example, name="blog_example"),
     path("blog/creating-lottie-animations-for-the-web-using-after-effects/", views.blog_lottie, name="blog_lottie"),
+    path("blog/google-foobar-challenge-solutions-with-animations/", views.blog_foobar, name="blog_foobar"),
 ]

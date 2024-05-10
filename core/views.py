@@ -158,5 +158,33 @@ def blog_lottie(request):
         return render(request, "blog/blog_lottie.html", context)
 
 
+def blog_foobar(request):
+    user_agent = get_user_agent(request)
+
+    # Getting the user's IP address
+    x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(",")[0]
+    else:
+        ip = request.META.get("REMOTE_ADDR")
+
+    # Saving the user's IP address and user agent to the database
+    BlogViews.objects.create(
+        blogId=3, dateCreated=datetime.now(), ipAddress=ip, userAgent=user_agent
+    )
+
+    # Calculating the total number of views
+    total_views = BlogViews.objects.filter(blogId=3).count()
+
+    # Passing the total number of views to the template
+    context = {"total_views": total_views}
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/blog/blog_foobar.html", context)
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "blog/blog_foobar.html", context)
+    
+
 def custom_404(request, exception):
     return render(request, "404.html", locals(), status=404)
