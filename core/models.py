@@ -68,3 +68,84 @@ class GameReviews(models.Model):
 
     class Meta:
         db_table = "GameReviews"
+
+
+class ToiletReview(models.Model):
+    id = models.AutoField(primary_key=True)
+    toiletName = models.CharField(max_length=255)
+    imgLink = models.CharField(max_length=255)
+    notes = models.TextField()
+    cleanliness = models.IntegerField()
+    toiletPaper = models.IntegerField()
+    smell = models.IntegerField()
+    bidetNozzle = models.IntegerField()
+    soap = models.IntegerField()
+    comfort = models.IntegerField()
+    lighting = models.IntegerField()
+    airiness = models.IntegerField()
+    doorLock = models.IntegerField()
+    flush = models.IntegerField()
+    overallRating = models.IntegerField(editable=False)
+
+    def save(self, *args, **kwargs):
+        cleanliness_score = int(self.cleanliness * 10.0 * 10)
+        toiletPaper_score = int(self.toiletPaper * 14.0 * 10)
+        smell_score = int(self.smell * 3.0 * 10)
+        bidetNozzle_score = int(self.bidetNozzle * 13.0 * 10)
+        soap_score = int(self.soap * 6.0 * 10)
+        comfort_score = int(self.comfort * 2.0 * 10)
+        lighting_score = int(self.lighting * 3.0 * 10)
+        airiness_score = int(self.airiness * 3.0 * 10)
+        doorLock_score = int(self.doorLock * 27.0 * 10)
+        flush_score = int(self.flush * 18.0 * 10)
+
+        self.overallRating = int((
+            cleanliness_score
+            + toiletPaper_score
+            + smell_score
+            + bidetNozzle_score
+            + soap_score
+            + comfort_score
+            + lighting_score
+            + airiness_score
+            + doorLock_score
+            + flush_score
+        )/100)
+        # Saving the overall rating
+        super(ToiletReview, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return str(self.toiletName)
+    
+    class Meta:
+        db_table = "ToiletReview"
+
+
+class AlbumReview(models.Model):
+    id = models.AutoField(primary_key=True)
+    albumName = models.CharField(max_length=255)
+    artistName = models.CharField(max_length=255)
+    imgLink = models.CharField(max_length=255)
+    yearReleased = models.IntegerField()
+    overallRating = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.albumName} - {self.artistName}"
+    
+    class Meta:
+        db_table = "AlbumReview"
+
+
+class BookReview(models.Model):
+    id = models.AutoField(primary_key=True)
+    bookName = models.CharField(max_length=255)
+    authorName = models.CharField(max_length=255)
+    imgLink = models.CharField(max_length=255)
+    genre = models.CharField(max_length=255)
+    overallRating = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.bookName} - {self.authorName}"
+    
+    class Meta:
+        db_table = "BookReview"

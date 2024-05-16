@@ -1,0 +1,264 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- 
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (mobile) {
+                alert("This website is designed to be experienced on a desktop. Please visit on a desktop device. -Çağrı");
+            } else {
+
+            }
+        }
+    </script> -->
+
+    <title>Çağrı Gökpunar - Toilet Reviews</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+
+    <style>
+        .collapsible {
+            background-color: #701414;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .content {
+            padding: 0 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #e9e8e6;
+        }
+    </style>
+
+</head>
+
+<body class="mobile">
+    <div>
+        <h1>Toilet Reviews</h1>
+        <p style="margin-top: 0; margin-bottom: 10px;">Every toilet has a life experience within.</p>
+
+        <button class="collapsible">Click to expand evaluation metrics</button>
+        <div class="content">
+            <div style="margin-bottom: 10px;">
+                <h3>Method</h3>
+                <p style="margin-top: 0;">I utilized the analytical hierarchy process (AHP) to compute the coefficients
+                    for each criterion. I grade the toilets on a scale of 1 to 10 for each criterion, and then I multiply
+                    the ratings by the coefficients. After adding all the products, I calculate the ultimate score for
+                    each toilet.</p>
+                <h3>Coefficients</h3>
+                <table style="font-weight: bold; justify-content: center; width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: right; color: #701414; width: 55%;" class="change-in-dark">Cleanliness: </td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Toilet Paper: </td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Smell: </td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Bidet Nozzle: </td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Soap: </td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Comfort: </td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Lighting: </td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Airiness: </td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Door Lock: </td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Flush: </td>
+                            <td>18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <p style="margin-bottom: 20px;"></p>
+
+        {% for review in toilet_reviews %}
+        <h2>{{ review.toiletName }}</h2>
+        <img style="width: 100%; height: 325px; object-fit: cover; overflow: hidden" src="{{ review.imgLink }}">
+        <p>{{ review.notes }}</p>
+        <div style="display: flex; margin-bottom: 20px;">
+            <div style="flex: 50%; margin-top: 20px;">
+                <table style="font-weight: bold; justify-content: center;">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Cleanliness: </td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Toilet Paper: </td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Smell: </td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Bidet Nozzle: </td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Soap: </td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Comfort: </td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Lighting: </td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Airiness: </td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Door Lock: </td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; color: #701414;" class="change-in-dark">Flush: </td>
+                            <td>18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="flex: 50%; justify-content: center; text-align: center; display: flex; align-items: center;">
+                <div>
+                    <p style="font-size: 72px;">{{ review.overallRating }}</p>
+                    <p style="color: #701414; font-weight: bold;" class="change-in-dark">Overall Rating</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <p style="margin-bottom: 40px;"></p>
+
+        <a href="{% url 'core:reviews' %}"
+            style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+                class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the reviews</a>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var switchButton = document.getElementById('switchButton');
+            var stylesheet = document.getElementById('stylesheet');
+            var elementsToChange = document.getElementsByClassName('change-in-dark');
+            var contents = document.getElementsByClassName('content');
+
+            // Check if the user has set their device to use a dark color scheme
+            var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            // Load the theme from localStorage or set it based on the user's device setting
+            var theme = localStorage.getItem('theme');
+            if (theme) {
+                stylesheet.href = theme;
+                applyThemeToElements(theme);
+                applyBackgroundColorToContents(theme);
+            } else if (prefersDarkScheme) {
+                stylesheet.href = "{% static 'css/style_dark.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+                applyThemeToElements("{% static 'css/style_dark.css' %}");
+                applyBackgroundColorToContents("{% static 'css/style_dark.css' %}");
+            } else {
+                stylesheet.href = "{% static 'css/style.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style.css' %}");
+                applyThemeToElements("{% static 'css/style.css' %}");
+                applyBackgroundColorToContents("{% static 'css/style.css' %}");
+            }
+
+            switchButton.addEventListener('click', function () {
+                if (stylesheet.href.includes('style.css')) {
+                    stylesheet.href = "{% static 'css/style_dark.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+                    applyThemeToElements("{% static 'css/style_dark.css' %}");
+                    applyBackgroundColorToContents("{% static 'css/style_dark.css' %}");
+                } else {
+                    stylesheet.href = "{% static 'css/style.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style.css' %}");
+                    applyThemeToElements("{% static 'css/style.css' %}");
+                    applyBackgroundColorToContents("{% static 'css/style.css' %}");
+                }
+            });
+
+            function applyThemeToElements(theme) {
+                for (var i = 0; i < elementsToChange.length; i++) {
+                    if (theme.includes('style_dark.css')) {
+                        elementsToChange[i].style.color = '#ffffff';
+                    } else {
+                        elementsToChange[i].style.color = '#701414';
+                    }
+                }
+            }
+
+            function applyBackgroundColorToContents(theme) {
+                for (var i = 0; i < contents.length; i++) {
+                    if (theme.includes('style_dark.css')) {
+                        contents[i].style.backgroundColor = '#1b1b1b';
+                    } else {
+                        contents[i].style.backgroundColor = '#e9e8e6';
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- 
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (mobile) {
+                alert("This website is designed to be experienced on a desktop. Please visit on a desktop device. -Çağrı");
+            } else {
+
+            }
+        }
+    </script> -->
+
+    <title>Çağrı Gökpunar - Reviews</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+
+</head>
+
+<body class="mobile">
+    <div>
+        <h1>Reviews</h1>
+        <p>
+            I enjoy reviewing things.
+        </p>
+
+        <h3 style="margin-top: 20px;">Game Reviews</h3>
+        <p style="margin-top: 0;">
+            I have reviewed <b>{{ game_reviews_count }}</b> games so far. Click <a href="{% url 'core:game_reviews' %}"
+                style="font-weight: bolder; color: #701414; background-color: #ffffff; padding: 2px;">here</a> to see
+            them.
+        </p>
+
+        <h3 style="margin-top: 20px;">Toilet Reviews</h3>
+        <p style="margin-top: 0;">
+            I have reviewed <b>{{ toilet_reviews_count }}</b> toilets so far. Click <a
+                href="{% url 'core:toilet_reviews' %}"
+                style="font-weight: bolder; color: #701414; background-color: #ffffff; padding: 2px;">here</a> to see
+            them.
+        </p>
+
+        <h3 style="margin-top: 20px;">Album Reviews</h3>
+        <p style="margin-top: 0;">
+            I have reviewed <b>{{ album_reviews_count }}</b> albums so far. Click <a
+                href="{% url 'core:album_reviews' %}"
+                style="font-weight: bolder; color: #701414; background-color: #ffffff; padding: 2px;">here</a> to see
+            them.
+        </p>
+
+        <h3 style="margin-top: 20px;">Book Reviews</h3>
+        <p style="margin-top: 0;">
+            I have reviewed <b>{{ book_reviews_count }}</b> books so far. Click <a href="{% url 'core:book_reviews' %}"
+                style="font-weight: bolder; color: #701414; background-color: #ffffff; padding: 2px;">here</a> to see
+            them.
+        </p>
+
+        <h3 style="margin-top: 20px;">City Reviews</h3>
+        <p style="margin-top: 0;">
+            Coming soon...
+        </p>
+
+        <div style="margin-bottom: 50px;"></div>
+
+
+        <a href="{% url 'core:index' %}"
+            style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+                class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the home page</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var switchButton = document.getElementById('switchButton');
+            var stylesheet = document.getElementById('stylesheet');
+
+            // Check if the user has set their device to use a dark color scheme
+            var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            // Load the theme from localStorage or set it based on the user's device setting
+            var theme = localStorage.getItem('theme');
+            if (theme) {
+                stylesheet.href = theme;
+            } else if (prefersDarkScheme) {
+                stylesheet.href = "{% static 'css/style_dark.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+            } else {
+                stylesheet.href = "{% static 'css/style.css' %}";
+                localStorage.setItem('theme', "{% static 'css/style.css' %}");
+            }
+
+            switchButton.addEventListener('click', function () {
+                if (stylesheet.href.includes('style.css')) {
+                    stylesheet.href = "{% static 'css/style_dark.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style_dark.css' %}");
+                } else {
+                    stylesheet.href = "{% static 'css/style.css' %}";
+                    localStorage.setItem('theme', "{% static 'css/style.css' %}");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

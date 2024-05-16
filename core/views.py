@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django_user_agents.utils import get_user_agent
 from datetime import datetime
-from .models import BlogViews, GameReviews
+from .models import BlogViews, GameReviews, ToiletReview, AlbumReview, BookReview
 
 
 def index(request):
@@ -67,6 +67,29 @@ def art(request):
 def reviews(request):
     user_agent = get_user_agent(request)
 
+    game_reviews_count = GameReviews.objects.all().count()
+    toilet_reviews_count = ToiletReview.objects.all().count()
+    album_reviews_count = AlbumReview.objects.all().count()
+    city_reviews_count = 0
+    book_reviews_count = BookReview.objects.all().count()
+
+    context = {"game_reviews_count": game_reviews_count,
+               "toilet_reviews_count": toilet_reviews_count,
+               "album_reviews_count": album_reviews_count,
+               "city_reviews_count": city_reviews_count,
+                "book_reviews_count": book_reviews_count}
+
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/reviews/reviews.html", context)
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "reviews/reviews.html", context)
+
+
+def game_reviews(request):
+    user_agent = get_user_agent(request)
+
     game_reviews = GameReviews.objects.all()
     # Reversing the order of the reviews
     game_reviews = game_reviews[::-1]
@@ -75,11 +98,63 @@ def reviews(request):
 
     # If the user is a mobile device, rendering the mobile template
     if user_agent.is_mobile or user_agent.is_tablet:
-        return render(request, "mobile/reviews.html", context)
+        return render(request, "mobile/reviews/game_reviews.html", context)
     # Otherwise, rendering the desktop template
     else:
-        return render(request, "reviews.html", context)
+        return render(request, "reviews/game_reviews.html", context)
+    
 
+def toilet_reviews(request):
+    user_agent = get_user_agent(request)
+
+    toilet_reviews = ToiletReview.objects.all()
+
+    context = {"toilet_reviews": toilet_reviews}
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/reviews/toilet_reviews.html", context)
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "reviews/toilet_reviews.html", context)
+    
+
+def album_reviews(request):
+    user_agent = get_user_agent(request)
+
+    album_reviews = AlbumReview.objects.all()
+
+    context = {"album_reviews": album_reviews}
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/reviews/album_reviews.html", context)
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "reviews/album_reviews.html", context)
+    
+
+def city_reviews(request):
+    user_agent = get_user_agent(request)
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/reviews/city_reviews.html", locals())
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "reviews/city_reviews.html", locals())
+    
+
+def book_reviews(request):
+    user_agent = get_user_agent(request)
+
+    book_reviews = BookReview.objects.all()
+
+    context = {"book_reviews": book_reviews}
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/reviews/book_reviews.html", context)
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "reviews/book_reviews.html", context)
+    
 
 def thesis(request):
     user_agent = get_user_agent(request)
