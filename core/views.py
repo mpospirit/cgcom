@@ -91,8 +91,8 @@ def game_reviews(request):
     user_agent = get_user_agent(request)
 
     game_reviews = GameReviews.objects.all()
-    # Reversing the order of the reviews
-    game_reviews = game_reviews[::-1]
+    # Ordering the reviews by the rating in ascending order
+    game_reviews = sorted(game_reviews, key=lambda x: x.overallRating, reverse=False)
 
     context = {"game_reviews": game_reviews}
 
@@ -108,6 +108,8 @@ def toilet_reviews(request):
     user_agent = get_user_agent(request)
 
     toilet_reviews = ToiletReview.objects.all()
+    # Ordering the reviews by the rating in ascending order
+    toilet_reviews = sorted(toilet_reviews, key=lambda x: x.overallRating, reverse=False)
 
     context = {"toilet_reviews": toilet_reviews}
     # If the user is a mobile device, rendering the mobile template
@@ -122,6 +124,8 @@ def album_reviews(request):
     user_agent = get_user_agent(request)
 
     album_reviews = AlbumReview.objects.all()
+    # Ordering the reviews by the rating in ascending order
+    album_reviews = sorted(album_reviews, key=lambda x: x.overallRating, reverse=False)
 
     context = {"album_reviews": album_reviews}
     # If the user is a mobile device, rendering the mobile template
@@ -146,6 +150,8 @@ def book_reviews(request):
     user_agent = get_user_agent(request)
 
     book_reviews = BookReview.objects.all()
+    # Ordering the reviews by the rating in ascending order
+    book_reviews = sorted(book_reviews, key=lambda x: x.overallRating, reverse=False)
 
     context = {"book_reviews": book_reviews}
     # If the user is a mobile device, rendering the mobile template
