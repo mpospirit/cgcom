@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django_user_agents.utils import get_user_agent
 from datetime import datetime
 from .models import BlogViews, GameReviews, ToiletReview, AlbumReview, BookReview
+from .utils import cat_human_translator
 
 
 def index(request):
@@ -266,6 +267,40 @@ def blog_foobar(request):
     else:
         return render(request, "blog/blog_foobar.html", context)
     
+
+def playground(request):
+    user_agent = get_user_agent(request)
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/playground/playground.html", locals())
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "playground/playground.html", locals())
+
+
+def playground_cat_translator(request):
+    user_agent = get_user_agent(request)
+
+    if request.method == 'POST':
+        text = request.POST.get('text')
+        mode = request.POST.get('mode')
+
+        translated_text = cat_human_translator(text, mode)
+
+        context = {"translated_text": translated_text,
+                   "text": text,}
+
+        if user_agent.is_mobile or user_agent.is_tablet:
+            return render(request, "mobile/playground/cat_translator.html", context)
+        else:
+            return render(request, "playground/cat_translator.html", context)
+        
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/playground/cat_translator.html", locals())
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "playground/cat_translator.html", locals())
 
 def custom_404(request, exception):
     return render(request, "404.html", locals(), status=404)

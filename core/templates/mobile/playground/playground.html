@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style_dark.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <title>Çağrı Gökpunar - Playground</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+
+</head>
+
+<body class="mobile">
+    <div>
+        <h1>Playground</h1>
+        <p>
+            Fun stuff that I have created.
+        </p>
+
+        <h3 style="margin-top: 20px;">Cat Language Translator <em style="color: #701414;">beta</em></h3>
+        <p style="margin-top: 0px;">
+            Translate cat language to human language and vice versa. Click <a href="{% url 'core:cat_translator' %}"
+            style="font-weight: bolder; color: #701414; background-color: #ffffff; padding: 2px;">here</a> to play.
+        </p>
+
+        <div style="margin-bottom: 50px;"></div>
+
+
+        <a href="{% url 'core:index' %}"
+            style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+                class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the home page</a>
+    </div>
+</body>
+
+</html>

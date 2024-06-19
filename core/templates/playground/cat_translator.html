@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style_dark.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <title>Cat Language Translator - Çağrı Gökpunar</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div>
+            <h1>Cat Language Translator <em style="color: #701414;">beta</em></h1>
+            <p>
+                Translate cat language to human language and vice versa.
+            </p>
+
+            <h2 style="margin-top: 20px;">Mode</h2>
+
+            <form method="post" action="{% url 'core:cat_translator' %}">
+                {% csrf_token %}
+                <label for="mode"></label>
+                <input type="radio" id="human_to_cat" name="mode" value="human_to_cat" checked
+                    onclick="updateLabel('Enter human text')">
+                <label for="human_to_cat">Human to Cat</label>
+                <input type="radio" id="cat_to_human" name="mode" value="cat_to_human"
+                    onclick="updateLabel('Enter cat text')">
+                <label for="cat_to_human">Cat to Human</label><br><br>
+                <textarea id="text" name="text" rows="4" cols="50" placeholder="{{ text|default:'Enter human text' }}"></textarea><br>
+                <button type="submit" style="width: 100%;"><i class="fas fa-globe"></i> Translate</button>
+            </form>
+
+            <textarea id="translated_text" name="translated_text" rows="4" cols="50" style="margin-top: 4px;"
+                readonly placeholder="Click Translate button to translate">{{ translated_text }}</textarea>
+
+            <div style="margin-bottom: 50px;"></div>
+
+            <a href="{% url 'core:playground' %}"
+                style="text-decoration: none; color: #ffffff; background-color: #701414; padding: 10px;"><i
+                    class="fa-solid fa-arrow-left-long" style="color: #ffffff;"></i> Go back to the playground</a>
+        </div>
+    </div>
+
+    <script>
+        function updateLabel(text) {
+            document.getElementById('text').placeholder = text;
+        }
+    </script>
+</body>

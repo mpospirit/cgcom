@@ -34,6 +34,35 @@ a {
     color: inherit;
 }
 
+button {
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    background-color: #701414;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    --webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+textarea {
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    resize: none;
+    --webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
 /* pre, code {
     font-family: 'Courier New', Courier, monospace;
 } */
