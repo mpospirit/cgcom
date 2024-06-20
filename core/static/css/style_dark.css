@@ -42,10 +42,9 @@ button {
     border: none;
     padding: 10px;
     font-size: 1em;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 0;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
 }
 
 textarea {
@@ -57,10 +56,9 @@ textarea {
     padding: 10px;
     font-size: 1em;
     resize: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 0;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
 }
 
 /* pre, code {
