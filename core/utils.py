@@ -27,6 +27,7 @@ def cat_human_translator(text, mode):
             "yyaavvvv": "w",
             "yyaaavvvv": "x",
             "yyaaaavvv": "y",
+            "yyaaaaavv": "z",
         }
         return translation_dict
 
@@ -41,7 +42,7 @@ def cat_human_translator(text, mode):
             i = 0
             while i < len(word):
                 matched = False
-                for length in range(7, 1, -1):  # Check for the longest patterns first
+                for length in range(9, 1, -1):  # Check for the longest patterns first
                     part = word[i : i + length]
                     if part in translation_dict:
                         decoded_word += translation_dict[part]
