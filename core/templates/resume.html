@@ -1,0 +1,458 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style_dark.css' %}">
+    <script src="https://kit.fontawesome.com/ac3cf26ac3.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <link rel="preload" href="{% static 'img/favicon.gif' %}" as="image">
+
+    <title>Çağrı Gökpunar - Resume</title>
+    <meta name="description" content="Çağrı Gökpunar's personal website.">
+    <meta name="keywords" content="Çağrı Gökpunar, Çağrı, Gökpunar, cagrigokpunar, cagri, gokpunar, cagri gokpunar">
+    <meta name="author" content="Çağrı Gökpunar">
+
+    <style type="text/css">
+        .tg {
+            border: none;
+            border-collapse: collapse;
+            border-color: #ccc;
+            border-spacing: 0;
+        }
+
+        .tg td {
+            border-color: #ccc;
+            border-style: solid;
+            border-width: 0px;
+            font-size: 14px;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tg th {
+            border-color: #ccc;
+            border-style: solid;
+            border-width: 0px;
+            font-size: 14px;
+            font-weight: normal;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tg .tg-baqh {
+            text-align: left;
+            vertical-align: center
+        }
+
+        .tg .tg-t6mk {
+            text-align: right;
+            vertical-align: center;
+            font-weight: bold
+        }
+
+        .tg .tg-i6kb {
+            text-align: left;
+            vertical-align: center
+        }
+
+        .tg .tg-lqy6 {
+            text-align: right;
+            vertical-align: center;
+            font-weight: bold
+        }
+
+        .tg .tg-0e1h {
+            color: #ffffff !important;
+            font-weight: bold;
+            text-align: right;
+            vertical-align: center;
+        }
+
+        .tg .tg-6ve6 {
+            color: #ffffff !important;
+            font-weight: bold;
+            text-align: left;
+            vertical-align: center;
+        }
+
+        tr {
+            border-bottom: 1px solid #878787;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="desktop">
+        <div class="header-container">
+            <img src="{% static 'img/favicon.png' %}" alt="mpospirit"
+                style="width: 20%; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
+            <h1>Çağrı Gökpunar</h1>
+            <p style="margin-bottom: 10px;"><em>mpospirit</em></p>
+
+            <p style="margin-bottom: 20px;"><strong>Analyst / Developer / Artist</strong></p>
+
+            <hr style="margin-bottom: 10px;">
+
+            <p>
+                <a href="https://www.cagrigokpunar.com" target="_blank" style="text-decoration: none; color: inherit;">
+                    <i class="change-in-dark fa-solid fa-globe" style="color: #ffffff;"></i>
+                    cagrigokpunar.com
+                </a> &emsp;
+                <a href="mailto:cagri@mpospirit.com" style="text-decoration: none; color: inherit;">
+                    <i class="change-in-dark fa-solid fa-envelope" style="color: #ffffff;"></i>
+                    cagri@mpospirit.com
+                </a> &emsp;
+                <a href="tel:+905342185035" style="text-decoration: none; color: inherit;">
+                    <i class="change-in-dark fa-solid fa-phone" style="color: #ffffff;"></i>
+                    +90 534 218 50 35
+                </a> &emsp;
+                <a href="https://www.linkedin.com/in/cagrigokpunar/" target="_blank"
+                    style="text-decoration: none; color: inherit;">
+                    <i class="change-in-dark fa-brands fa-linkedin" style="color: #ffffff;"></i>
+                    in/cagrigokpunar
+                </a>
+            </p>
+
+            <hr style="margin-top: 10px; margin-bottom: 20px;">
+
+            <div style="text-align: left;">
+                <h2 style="margin-bottom: 10px; color: #ffffff; background-color: #701414; padding: 5px;">Experience
+                </h2>
+                <h3>Senior Data Analyst</h3>
+                <p><em><a href="https://www.pwc.com" target="_blank"><img
+                                src="https://www.pwc.com/etc.clientlibs/pwc/clientlibs/css_common/resources/image/favicon.ico"
+                                width="15px">
+                            PwC</a></em></p>
+                <p><i class="change-in-dark fa-regular fa-calendar" style="color: #ffffff;"></i> 2023 - Present</p>
+
+                <div style="background-color: #1b1b1b; text-align: justify; padding-left: 15px; padding-right: 15px;">
+                    <h3 style="margin-top: 10px; margin-bottom: 10px;">Projects</h3>
+                    <p><b style="color: #701414; background-color: #ffffff;">IRRBB Tool</b></p>
+                    <p style="margin-bottom: 5px"><em>Interest Rate Risk in the Banking Book Calculation</em></p>
+                    <p style="margin-bottom: 10px;">An international project where I created and implemented a tool to
+                        calculate
+                        interest rates depending on the different shock scenarios.</p>
+                    <ul style="margin-bottom: 20px; list-style-position: inside;">
+                        <li style="margin-bottom: 10px;">I used pandas in the backend to perform very complex
+                            calculations. The previous painful calculation process was simplified with minimal user
+                            inputs and a friendly UI.
+                        </li>
+                        <li style="margin-bottom: 10px;">Django is the preferred library for the backend because of its
+                            fast development pace and integration with data manipulation libraries.
+                        </li>
+                        <li>Deployed the tool via Windows Server with IIS.</li>
+                    </ul>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">API Development</b></p>
+                    <p style="margin-bottom: 5px"><em>Architectural Design and Integration</em></p>
+                    <p style="margin-bottom: 10px;">I developed a scalable and secure RESTful API for a mobile
+                        application that flexibly integrates with different databases.</p>
+                    <ul style="margin-bottom: 20px; list-style-position: inside;">
+                        <li style="margin-bottom: 10px;">I architectured the API with Django REST Framework and deployed
+                            it on Linux servers.</li>
+                        </li>
+                        <li style="margin-bottom: 10px;">I used JWT (JSON Web Token) for authentication and
+                            authorization, and I implemented a rate limiter to prevent abuse.</li>
+                        </li>
+                        <li style="margin-bottom: 10px;">Designed a relational mock database for testing purposes.</li>
+                        <li>I also helped the team with the UI & UX design.</li>
+                    </ul>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">PwC Trainer</b></p>
+                    <p style="margin-bottom: 5px"><em>Python Training</em></p>
+                    <p style="margin-bottom: 20px;">I trained the clients and the team on Python and its frameworks to
+                        improve their coding skills.</p>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">DnA Platform</b></p>
+                    <p style="margin-bottom: 5px"><em>Internal Platform for the Team</em></p>
+                    <p style="margin-bottom: 10px;">I have designed, developed, and led an internal team management and
+                        ease-of-access platform.</p>
+                    <ul style="margin-bottom: 20px; list-style-position: inside;">
+                        <li style="margin-bottom: 10px;">The platform is built with Streamlit and deployed using
+                            company's Ubuntu servers.</li>
+                        </li>
+                        <li style="margin-bottom: 10px;">I architectured a relational database.</li>
+                        </li>
+                        <li style="margin-bottom: 10px;">For the API, I used Flask and JWT for authentication.</li>
+                    </ul>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">Strategic Consulting</b></p>
+                    <p style="margin-bottom: 5px"><em>Data-driven Expansion Strategies</em></p>
+                    <p style="margin-bottom: 20px;">Collaborated with Strategy& for a client to develop international
+                        expansion strategies based on data-driven insights.</p>
+                </div>
+
+                <h3 style="margin-top: 20px;">Data Analyst</h3>
+                <p><em><a href="https://www.bisu.com.tr" target="_blank"><img
+                                src="https://bisu.com.tr/assets/img/favicon-32x32.png" width="15px"> BiSU</a></em></p>
+                <p><i class="change-in-dark fa-regular fa-calendar" style="color: #ffffff;"></i> 2022 - 2023</p>
+
+                <div style="background-color: #1b1b1b; text-align: justify; padding-left: 15px; padding-right: 15px;">
+                    <h3 style="margin-top: 10px; margin-bottom: 10px;">Projects</h3>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">Cortex</b></p>
+                    <p style="margin-bottom: 5px"><em>No-code CRM Tool</em></p>
+                    <p style="margin-bottom: 10px;">I created this tool from scratch using the Python library Streamlit
+                        and hosted it on AWS EC2.</p>
+                    <ul style="margin-bottom: 20px; list-style-position: inside;">
+                        <li style="margin-bottom: 10px;">Business units can access very specific masses with many
+                            different
+                            filters, manage campaigns, analyze masses, and predict mass campaign response rates with the
+                            trained machine learning model.
+                        </li>
+                        <li>
+                            This project has increased the work speed of the entire commercial team by reducing the
+                            response time to requests from days to seconds.
+                        </li>
+                    </ul>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">Distributor Location Optimization</b></p>
+                    <p style="margin-bottom: 5px"><em>Calculating the Optimal Location of the Distributors</em></p>
+                    <p style="margin-bottom: 10px;">An operations research project where I calculated the optimal
+                        locations for the distributors to minimize the transportation and storage costs.</p>
+                    <ul style="margin-bottom: 20px; list-style-position: inside;">
+                        <li style="margin-bottom: 10px;">For the calculations I used Python's OR libraries.
+                        </li>
+                        <li style="margin-bottom: 10px;">The mathematical model was built with the help of the
+                            operations, logistics, and commercial teams.
+                        </li>
+                        <li>
+                            Various path optimization algorithms were used to find the optimal locations, including
+                            Google and Yandex APIs.
+                        </li>
+                    </ul>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">Analytical Works</b></p>
+                    <p style="margin-bottom: 5px"><em>Crucial Analytics for Decision Making</em></p>
+                    <p style="margin-bottom: 10px;">I created the dashboards and reports that got the company to focus
+                        on these issues and dramatically improve its KPIs.</p>
+                    <ul style="margin-bottom: 20px; list-style-position: inside;">
+                        <li style="margin-bottom: 10px;"><b>Availability Report:</b> A dashboard of SKU availability for
+                            each retailer.
+                            This dashboard is based on a complicated yet efficient algorithm that determines whether a
+                            product is sellable or not.
+                        </li>
+                        <li style="margin-bottom: 10px;"><b>Cancellations Dashboard:</b> Super detailed dashboard of
+                            order cancellation reasons, sources and statistics. The number of order cancellations halved
+                            after the dashboard was published.</li>
+                        </li>
+                        <li style="margin-bottom: 10px;"><b>Other:</b> Cause of change, cohort, like-for-like,
+                            segmentation, funnel, click-stream, AHP (analytical hierarchy process), A/B testing, etc.
+                        </li>
+                    </ul>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">Distributor Panel</b></p>
+                    <p style="margin-bottom: 5px"><em>Live Statistics Panel for Distributors</em></p>
+                    <p style="margin-bottom: 20px;">I created a live statistics panel for the distributors to see their
+                        sales, stock, and other important metrics in real-time, instead of relying on daily mail
+                        reports.</p>
+
+                </div>
+
+                <h2 style="margin-bottom: 10px; color: #ffffff; background-color: #701414; padding: 5px;">Education</h2>
+
+                <h3>Mathematics Engineering</h3>
+                <p><em><a href="https://www.itu.edu.tr" target="_blank"><img
+                                src="https://upload.wikimedia.org/wikipedia/tr/9/90/İTÜ_logo.png" height="15px"
+                                style="background-color: #ffffff;">
+                            Istanbul Technical University</a></em></p>
+                <p><i class="change-in-dark fa-solid fa-graduation-cap" style="color: #ffffff;"></i> 2022</p>
+
+                <div style="background-color: #1b1b1b; text-align: justify; padding-left: 15px; padding-right: 15px;">
+                    <h3 style="margin-top: 10px; margin-bottom: 10px;">Graduation Thesis</h3>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">mathematical Artificial Intelligence</b>
+                    </p>
+                    <p style="margin-bottom: 5px"><em>An investigation into the mathematical topics used in artificial
+                            intelligence.</em></p>
+                    <p style="margin-bottom: 20px;">Can be found on my website: <a
+                            href="https://www.cagrigokpunar.com/thesis"
+                            target="_blank"><b>www.cagrigokpunar.com/thesis</b></a></p>
+
+                </div>
+
+                <h2 style="margin-bottom: 10px; color: #ffffff; background-color: #701414; padding: 5px;">Tech Stack
+                </h2>
+
+
+                <table class="tg" style="table-layout: fixed; margin-bottom: 20px;">
+                    <colgroup>
+                        <col style="width: 30%">
+                        <col style="width: 35%">
+                        <col style="width: 35%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="tg-0e1h">
+                                <h3>Domain</h3>
+                            </th>
+                            <th class="tg-6ve6">
+                                <h3>Preferred</h3>
+                            </th>
+                            <th class="tg-6ve6">
+                                <h3>Can handle</h3>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tg-t6mk">Machine Learning</td>
+                            <td class="tg-i6kb">scikit-learn, Tensorflow, Keras</td>
+                            <td class="tg-i6kb">PyTorch</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lqy6">Data Manipulation and Analysis</td>
+                            <td class="tg-baqh">pandas, polars, plotly</td>
+                            <td class="tg-baqh">seaborn, cufflinks, Alteryx</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-t6mk">Database Management</td>
+                            <td class="tg-i6kb">SQL</td>
+                            <td class="tg-i6kb">MongoDB, DynamoDB</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lqy6">Data Visualization</td>
+                            <td class="tg-baqh">PowerBI, QuickSight</td>
+                            <td class="tg-baqh">Tableau, Looker</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-t6mk">Backend Development</td>
+                            <td class="tg-i6kb">Django, Postman, Streamlit</td>
+                            <td class="tg-i6kb">Flask</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lqy6">Frontend Development</td>
+                            <td class="tg-baqh">Vanilla JS</td>
+                            <td class="tg-baqh">-</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-t6mk">Cloud</td>
+                            <td class="tg-i6kb">AWS</td>
+                            <td class="tg-i6kb">Azure, DigitalOcean</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lqy6">Operations Research</td>
+                            <td class="tg-baqh">-</td>
+                            <td class="tg-baqh">Pyomo, Ortools, PuLP, SCIP</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lqy6">UI/UX</td>
+                            <td class="tg-baqh">Adobe XD</td>
+                            <td class="tg-baqh">Figma</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-t6mk">Mobile Development</td>
+                            <td class="tg-i6kb">-</td>
+                            <td class="tg-i6kb">Flutter, Swift</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lqy6">Operating System</td>
+                            <td class="tg-baqh">MacOS</td>
+                            <td class="tg-baqh">Windows, Linux</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-t6mk">Graphic Design</td>
+                            <td class="tg-i6kb">Photoshop, Illustrator</td>
+                            <td class="tg-i6kb">Affinity Designer, Procreate</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lqy6">Video Editing</td>
+                            <td class="tg-baqh">Premiere Pro, After Effects</td>
+                            <td class="tg-baqh">DaVinci Resolve, Final Cut Pro</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-t6mk">3D Modeling</td>
+                            <td class="tg-i6kb">Blender, SOLIDWORKS</td>
+                            <td class="tg-i6kb">-</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-t6mk">Music Production</td>
+                            <td class="tg-i6kb">FL Studio, Logic Pro</td>
+                            <td class="tg-i6kb">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 style="margin-bottom: 10px; color: #ffffff; background-color: #701414; padding: 5px;">Personal
+                    Projects
+                </h2>
+                <p>
+                    I like to spend my free time on personal projects out of curiosity, aiming to improve my skills and
+                    learn new things.
+                </p>
+                <div style="background-color: #1b1b1b; text-align: justify; padding-left: 15px; padding-right: 15px;">
+                    <h3 style="margin-top: 10px; margin-bottom: 10px;">Projects</h3>
+                    <p><b style="color: #701414; background-color: #ffffff;">sözcük.app</b></p>
+                    <p style="margin-bottom: 5px"><em>Daily Word Puzzle Game</em></p>
+                    <p style="margin-bottom: 10px;">sözcük.app is a daily word game made with the inspiration of the
+                        games like Wordle, Kelime Oyunu, parolla.app, etc. The goal is to find the words by guessing
+                        them.</p>
+                    <ul style="margin-bottom: 20px; list-style-position: inside;">
+                        <li style="margin-bottom: 10px;">Each day, 14 random words with different lengths are chosen
+                            from Turkish Language Association's (TDK) dictionary.
+                        </li>
+                        <li style="margin-bottom: 10px;">The game is hosted using AWS Elastic Beanstalk.
+                        </li>
+                        <li>The game uses AWS RDS for the database.</li>
+                    </ul>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">Google Foobar Challenge</b></p>
+                    <p style="margin-bottom: 5px"><em>A secret coding test that Google uses to find and hire talented
+                            programmers.</em></p>
+                    <p style="margin-bottom: 5px;">I was invited to the challenge and completed all the levels. The
+                        challenge was a great opportunity to improve my problem-solving skills and learn new algorithms. <br>      
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        I also wrote a blog post about my experience: <br><a
+                            href="https://www.cagrigokpunar.com/blog/google-foobar-challenge-solutions-with-animations/"
+                            target="_blank"><b>www.cagrigokpunar.com/blog/google-foobar-challenge-solutions-with-animations</b></a>
+                    </p>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">Tetris Bot</b> (ongoing)</p>
+                    <p style="margin-bottom: 5px"><em>Reinforcement Learning</em></p>
+                    <p style="margin-bottom: 20px;">I am working on a Tetris bot that learns to play the game by itself
+                        using Deep Q Networks.</p>
+                </div>
+
+                <h2 style="margin-bottom: 10px; color: #ffffff; background-color: #701414; padding: 5px;">Interests
+                </h2>
+                <p style="margin-bottom: 10px;">
+                    I have a wide range of interests and hobbies that I enjoy doing in my free time.
+                </p>
+                <p>
+                    <i class="change-in-dark fa-solid fa-book" style="color: #ffffff;"></i> I like reading books about philosophy, history, strategic thinking, linguistics, evolution, and psychology.
+                </p>
+                <p>
+                    <i class="change-in-dark fa-solid fa-heart-pulse" style="color: #ffffff;"></i> I like swimming, skating, and doing calisthenics.
+                </p>
+                <p>
+                    <i class="change-in-dark fa-solid fa-paintbrush" style="color: #ffffff;"></i> I am also interested in art.
+                </p>
+                <div style="background-color: #1b1b1b; text-align: justify; padding-left: 15px; padding-right: 15px;">
+                    <h3 style="margin-top: 10px; margin-bottom: 10px;">Art</h3>
+                    <p><b style="color: #701414; background-color: #ffffff;">Paintings</b></p>
+                    <p style="margin-bottom: 5px"><em>Portrait Drawings</em></p>
+                    <p style="margin-bottom: 10px;">My focus is on drawing portraits with different mediums. <br>
+                        You can see few of my works on my website: <a href="https://www.cagrigokpunar.com/art"
+                            target="_blank"><b>www.cagrigokpunar.com/art</b></a></p>
+
+                    <p><b style="color: #701414; background-color: #ffffff;">Music</b></p>
+                    <p style="margin-bottom: 5px"><em>Music Production</em></p>
+                    <p style="margin-bottom: 5px;">I like to produce electronic music.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -45,6 +45,15 @@ def about(request):
 #         return render(request, "skills.html", locals())
 
 
+def resume(request):
+    user_agent = get_user_agent(request)
+    # If the user is a mobile device, rendering the mobile template
+    if user_agent.is_mobile or user_agent.is_tablet:
+        return render(request, "mobile/resume.html", locals())
+    # Otherwise, rendering the desktop template
+    else:
+        return render(request, "resume.html", locals())
+
 def tech_stack(request):
     user_agent = get_user_agent(request)
     # If the user is a mobile device, rendering the mobile template
