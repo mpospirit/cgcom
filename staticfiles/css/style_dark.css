@@ -75,6 +75,14 @@ textarea {
     justify-content: center;
 }
 
+.desktop {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    text-align: justify;
+}
+
 .blog {
     margin-left: 25%;
     margin-right: 25%;
